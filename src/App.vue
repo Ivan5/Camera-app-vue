@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Camera/>
+    <Camera v-on:takePicture="this.takePicture"/>
   </div>
 </template>
 
@@ -8,7 +8,10 @@
 import Camera from "./components/Camera.vue";
 export default {
   name: "app",
-  components: { Camera }
+  components: { Camera },
+  methods: {
+    takePicture() {}
+  }
 };
 </script>
 
